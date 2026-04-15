@@ -38,6 +38,10 @@ a {
     box-sizing: border-box;
 
     margin-bottom: 32px;
+
+    @include on-tablet {
+      margin-bottom: 80px;
+    }
     &__logo {
       display: flex;
     }
@@ -55,11 +59,15 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include on-tablet {
+      align-items: flex-start;
+    }
   }
 
   &__middle {
-    padding: 0 16px 0 16px;
     margin-bottom: 32px;
+
     &__text {
       max-width: 288px;
       width: 100%;
@@ -70,6 +78,10 @@ a {
       line-height: 150%;
       letter-spacing: -0.01em;
       text-align: center;
+
+      @include on-tablet {
+        text-align: left;
+      }
     }
   }
 
@@ -77,6 +89,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include on-tablet {
+      margin-top: 100px;
+    }
     &__title {
       color: #f9512e;
       font-weight: 400;
@@ -85,9 +101,20 @@ a {
       letter-spacing: -0.05em;
       text-transform: uppercase;
       text-align: center;
+
+      @include on-tablet {
+        position: relative;
+        margin-bottom: -150px;
+        z-index: 3;
+      }
     }
 
     &__box {
+      @include on-tablet {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 80px;
+      }
       &__img {
         max-width: 288px;
         width: 100%;
@@ -145,6 +172,10 @@ a {
     line-height: 150%;
     letter-spacing: -0.01em;
     margin-bottom: 56px;
+
+    @include on-tablet {
+      margin-bottom: 80px;
+    }
   }
 
   &__grid {
@@ -152,6 +183,12 @@ a {
     grid-template-columns: 1fr;
     gap: 64px;
     justify-items: center;
+
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 24px;
+      column-gap: 80px;
+    }
 
     &__card {
       width: 100%;
@@ -206,13 +243,39 @@ a {
 }
 
 .about-us {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &__img {
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    bottom: 14%;
+    z-index: 2;
+    pointer-events: none;
+
+    @include on-tablet {
+      max-width: 470px;
+      bottom: 13%;
+      left: 10%;
+    }
+  }
   &__top {
     display: flex;
     flex-direction: column;
     gap: 32px;
     margin-bottom: 64px;
+
+    @include on-tablet {
+      position: relative;
+      z-index: 3;
+      flex-direction: row;
+      gap: 24px;
+    }
     &__title {
       color: #f9512e;
       font-weight: 400;
@@ -220,6 +283,10 @@ a {
       line-height: 85%;
       letter-spacing: -0.05em;
       text-transform: uppercase;
+
+      @include on-tablet {
+        width: 328px;
+      }
     }
 
     &__text {
@@ -227,21 +294,21 @@ a {
       font-size: 16px;
       line-height: 150%;
       letter-spacing: -0.01em;
+
+      @include on-tablet {
+        width: 328px;
+      }
     }
   }
 
   &__bottom {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 48px;
     position: relative;
-    overflow: hidden;
 
-    &__img {
-      position: absolute;
-      top: 15%;
-      z-index: 1;
-      pointer-events: none;
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     &__card {
@@ -272,9 +339,12 @@ a {
   background-color: #1c1a26;
   padding: 56px 16px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 
+  @include on-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -365,9 +435,18 @@ a {
   }
 
   &__network {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    @include on-tablet {
+      grid-column: span 2;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    @include on-tablet {
+      flex-direction: row;
+    }
     &__socials {
       display: flex;
       justify-content: flex-start;
