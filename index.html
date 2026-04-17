@@ -6,10 +6,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+    <title>Creative Bakery</title>
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
+    />
+    <link
+      rel="icon"
+      href="/src/images/icons/logo.svg"
     />
   </head>
   <body class="body">
@@ -25,7 +29,7 @@
           <ul class="header__top__links__list">
             <li class="header__top__links__list__link">
               <a
-                href="#"
+                href="#what-we-bake"
                 class="header__top__links__list__link__text"
               >
                 Products
@@ -33,7 +37,7 @@
             </li>
             <li class="header__top__links__list__link">
               <a
-                href="#"
+                href="#about-us"
                 class="header__top__links__list__link__text"
               >
                 About us
@@ -41,14 +45,14 @@
             </li>
             <li class="header__top__links__list__link">
               <a
-                href="#"
+                href="#blog"
                 class="header__top__links__list__link__text"
               >
                 Blog
               </a>
             </li>
             <li class="header__top__links__list__link">
-              <a href="#">
+              <a href="#footer">
                 <img
                   class="header__top__links__list__link__img"
                   src="/src/images/icons/phone.svg"
@@ -56,7 +60,7 @@
                 />
               </a>
               <a
-                href="#"
+                href="#footer"
                 class="header__top__links__list__link__text header__top__links__list__link__text--contact-us"
               >
                 Contact us
@@ -66,7 +70,7 @@
         </nav>
 
         <a
-          href="#"
+          href="#menu"
           class="header__top__burger"
         >
           <img
@@ -94,7 +98,7 @@
           </div>
         </div>
         <a
-          href="#learn-more"
+          href="#about-us"
           class="header__bottom__btn"
         >
           <img
@@ -107,8 +111,79 @@
       </div>
     </header>
 
+    <aside
+      class="menu"
+      id="menu"
+    >
+      <div class="menu__top">
+        <a class="menu__top__logo">
+          <img
+            src="/src/images/icons/logo.svg"
+            alt="logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="menu__top__close"
+        >
+          <img
+            src="/src/images/icons/close.svg"
+            alt="close-menu"
+          />
+        </a>
+      </div>
+
+      <nav class="menu__nav">
+        <ul class="menu__nav__list">
+          <li class="menu__nav__list__item">
+            <a
+              href="#what-we-bake"
+              class="menu__nav__list__item__link"
+            >
+              Products
+            </a>
+          </li>
+          <li class="menu__nav__list__item">
+            <a
+              href="#about-us"
+              class="menu__nav__list__item__link"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="menu__nav__list__item">
+            <a
+              href="#blog"
+              class="menu__nav__list__item__link"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="menu__nav__list__item">
+            <a href="#footer">
+              <img
+                class="menu__nav__list__item__img"
+                src="/src/images/icons/phone.svg"
+                alt="#"
+              />
+            </a>
+            <a
+              href="#footer"
+              class="menu__nav__list__item menu__nav__list__item--contact-us"
+            >
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
     <main class="main">
-      <section class="what-we-bake">
+      <section
+        class="what-we-bake"
+        id="what-we-bake"
+      >
         <h2 class="what-we-bake__title">What we bake</h2>
         <p class="what-we-bake__desc">
           We can customize our cookies right for your needs. Just imagine it
@@ -251,7 +326,10 @@
           </article>
         </div>
       </section>
-      <section class="about-us">
+      <section
+        class="about-us"
+        id="about-us"
+      >
         <img
           src="/src/images/about-us-bckgr/Crumbs.png"
           alt="about-us-img"
@@ -269,7 +347,10 @@
           </p>
         </div>
 
-        <div class="about-us__bottom">
+        <div
+          class="about-us__bottom"
+          id="blog"
+        >
           <div class="about-us__bottom__card">
             <h2 class="about-us__bottom__card__title">2015</h2>
             <p class="about-us__bottom__card__text">Foundation year</p>
@@ -308,14 +389,39 @@
             <p class="footer__top__menu__text footer__top__menu__text--menu">
               Menu
             </p>
-            <p class="footer__top__menu__text">Products</p>
-            <p class="footer__top__menu__text">About US</p>
-            <p class="footer__top__menu__text">Blog</p>
-            <p class="footer__top__menu__text">Tems & Privacy</p>
+            <a
+              class="footer__top__menu__text"
+              href="#what-we-bake"
+            >
+              Products
+            </a>
+            <a
+              class="footer__top__menu__text"
+              href="#about-us"
+            >
+              About US
+            </a>
+            <a
+              class="footer__top__menu__text"
+              href="#blog"
+            >
+              Blog
+            </a>
+            <a
+              class="footer__top__menu__text"
+              href="#contact-us"
+            >
+              Tems & Privacy
+            </a>
           </div>
         </div>
         <div class="footer__contact-us">
-          <h2 class="footer__contact-us__title">Contact us</h2>
+          <h2
+            class="footer__contact-us__title"
+            id="footer"
+          >
+            Contact us
+          </h2>
           <div class="footer__contact-us__wrapper">
             <div class="footer__contact-us__numbers">
               <p
@@ -324,19 +430,19 @@
                 Call us
               </p>
               <a
-                href="#"
+                href="tel:6295550129"
                 class="footer__contact-us__numbers__number"
               >
                 (629) 555-0129
               </a>
               <a
-                href="#"
+                href="tel:6035550123"
                 class="footer__contact-us__numbers__number"
               >
                 (603) 555-0123
               </a>
               <a
-                href="#"
+                href="tel:7045550127"
                 class="footer__contact-us__numbers__number"
               >
                 (704) 555-0127
@@ -346,7 +452,8 @@
             <div class="footer__contact-us__email-us">
               <p class="footer__contact-us__email-us__text">Email</p>
               <a
-                href="#"
+                href="mailto:bakerlab@example.com"
+                target="_blank"
                 class="footer__contact-us__email-us__email"
               >
                 bakerlab@example.com
