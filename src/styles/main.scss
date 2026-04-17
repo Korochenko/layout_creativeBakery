@@ -16,10 +16,14 @@ a {
   background: hsl(311, 100%, 97%);
   font-family: Inter;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   height: 100vh;
+  max-width: 1192px;
   width: 100%;
 
   display: flex;
@@ -224,10 +228,13 @@ a {
 }
 
 .main {
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
 
   padding: 0 16px 72px 16px;
   box-sizing: border-box;
@@ -239,6 +246,8 @@ a {
 
 .what-we-bake {
   margin-bottom: 72px;
+  max-width: 1192px;
+  width: 100%;
   &__title {
     color: #f9512e;
     font-weight: 400;
@@ -292,7 +301,7 @@ a {
         max-width: 402px;
         &:nth-child(3),
         &:nth-child(4) {
-          transform: translateX(70%);
+          transform: translateX(85%);
         }
       }
       &__img {
@@ -342,6 +351,7 @@ a {
 }
 
 .about-us {
+  max-width: 1192px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -362,6 +372,12 @@ a {
       bottom: 13%;
       left: 10%;
     }
+
+    @include on-desktop{
+      max-width: 650px;
+      bottom: 0%;
+      left: 14%;
+    }
   }
   &__top {
     display: flex;
@@ -374,6 +390,10 @@ a {
       z-index: 3;
       flex-direction: row;
       gap: 24px;
+    }
+
+    @include on-desktop {
+      justify-content: space-between;
     }
     &__title {
       color: #f9512e;
@@ -397,6 +417,9 @@ a {
       @include on-tablet {
         width: 328px;
       }
+      @include on-desktop {
+        width: 544px;
+      }
     }
   }
 
@@ -408,6 +431,13 @@ a {
 
     @include on-tablet {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include on-desktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: column;
+      gap: 24px;
+      padding-bottom: 293px;
     }
 
     &__card {
@@ -436,13 +466,21 @@ a {
 
 .footer {
   background-color: #1c1a26;
-  padding: 56px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-  display: grid;
-  grid-template-columns: 1fr;
+  &__wrapper {
+    max-width: 1192px;
+    width: 100%;
+    padding: 56px 16px;
 
-  @include on-tablet {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__top {
     display: flex;
@@ -478,6 +516,15 @@ a {
   &__contact-us {
     display: flex;
     flex-direction: column;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include on-desktop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
     &__title {
       margin-bottom: 40px;
       color: #fff;
